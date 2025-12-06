@@ -9,24 +9,18 @@ build-backend = "poetry.core.masonry.api"
 
 [project]
 name = "pylibjpeg-libjpeg"
+description = "A Python wrapper for libjpeg, with a focus on use as a plugin for for pylibjpeg"
 readme = "README.md"
 version = "2.4.0"
-keywords = ["dicom pydicom python jpg jpeg jpg-ls jpeg-ls libjpeg pylibjpeg"]
+keywords = ["dicom", "pydicom", "python", "jpg", "jpeg", "jpg-ls", "jpeg-ls", "libjpeg", "pylibjpeg"]
 license = "GPL-3.0-only"
 license-files = ["LICENSE"]
-maintainers = ["scaramallion <scaramallion@users.noreply.github.com>"]
-dependencies = [
-    "numpy>=2.2,<2.3;python_version < '3.11'",
-    "numpy>=2.3.3;python_version >= '3.11'",
+authors = [
+    { name="pylibjpeg-libjpeg contributors" }
 ]
-
-[tool.poetry.build]
-script = "build_package.py"
-generate-setup-file = true
-
-
-[tool.poetry]
-authors = ["pylibjpeg-libjpeg contributors"]
+maintainers = [
+    { name = "scaramallion", email = "<scaramallion@users.noreply.github.com>" }
+]
 classifiers=[
     "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
     "Intended Audience :: Developers",
@@ -46,11 +40,22 @@ classifiers=[
     "Topic :: Scientific/Engineering :: Medical Science Apps.",
     "Topic :: Software Development :: Libraries",
 ]
-description = """\
-A Python wrapper for libjpeg, with a focus on use as a plugin for \
-for pylibjpeg\
-"""
+dependencies = [
+    "numpy>=2.2,<2.3;python_version < '3.11'",
+    "numpy>=2.3.3;python_version >= '3.11'",
+]
+
+[project.urls]
 homepage = "https://github.com/pydicom/pylibjpeg-libjpeg"
+documentation = "https://github.com/pydicom/pylibjpeg-libjpeg#README.md"
+download = "https://github.com/pydicom/pylibjpeg-libjpeg/archive/main.zip"
+repository = "https://github.com/pydicom/pylibjpeg-libjpeg"
+
+[tool.poetry.build]
+script = "build_package.py"
+generate-setup-file = true
+
+[tool.poetry]
 # We want to be able to build from sdist, so include required libjpeg src
 #   But don't include any libjpeg src in the built wheels
 include = [
@@ -68,7 +73,7 @@ packages = [
 [tool.poetry.dependencies]
 python = ">=3.10"
 #numpy = [
-#    { version = "2.2.6", markers = "python_version < '3.11'" },
+#    { version = "2.2.6", markers = "python_version == '3.10'" },
 #    { version = "2.3.5", markers = "python_version >= '3.11'" },
 #]
 
