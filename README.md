@@ -8,11 +8,11 @@
 
 ## pylibjpeg-libjpeg
 
-A Python 3.8+ wrapper for Thomas Richter's
+A Python 3.10+ wrapper for Thomas Richter's
 [libjpeg](https://github.com/thorfdbg/libjpeg), with a focus on use as a
 plugin for [pylibjpeg](http://github.com/pydicom/pylibjpeg).
 
-Linux, MacOS and Windows are all supported.
+Linux, macOS and Windows are all supported.
 
 ### Installation
 #### Dependencies
