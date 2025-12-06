@@ -2,7 +2,7 @@ name: unit-tests
 
 on:
   push:
-    branches: [ main ]
+    branches: [ main, py3.14 ]
   pull_request:
 
 jobs:
